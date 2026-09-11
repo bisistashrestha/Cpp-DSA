@@ -15,9 +15,8 @@ int main(){
     }
     int sum=0;
     for(int i=0;i<n;i++){
-        if (leftmax[i]==INT_MIN || rightmax[i]==INT_MIN || (min(leftmax[i],rightmax[i])-arr[i])<0){
-            sum+=0;
-        } else{
+        int currSum=min(leftmax[i],rightmax[i])-arr[i];
+        if (currSum>0){
             sum+=(min(leftmax[i],rightmax[i])-arr[i]);
         }
     }
