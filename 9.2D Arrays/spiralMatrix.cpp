@@ -20,9 +20,11 @@ int main(){
             cout<<arr[i][ecol]<<" ";
         }
         for(int i=ecol-1;i>=scol;i--){
+            if(srow==erow) break;
             cout<<arr[erow][i]<<" ";
         }
         for(int i=erow-1;i>=srow+1;i--){
+            if(scol==ecol) break;
             cout<<arr[i][scol]<<" ";
         }
         srow++;
